@@ -1,5 +1,17 @@
 # minishell
 
+## General usage
+
+### installation
+```bash
+make
+```
+
+### start minishell
+```bash
+./minishell
+```
+
 ## Description
 
 Write a shell.
