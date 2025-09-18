@@ -7,14 +7,21 @@
 ## General usage
 
 ### installation
+Clone the repository
 ```bash
-git clone git@github.com:louakedwayl/minishell.git && cd minishell && make
+git clone git@github.com:louakedwayl/minishell.git 
+```
+
+Compile
+```bash
+cd minishell && make
 ```
 
 ### start minishell
 ```bash
 ./minishell
 ```
+A prompt will appear. You may enter your commands to be executed.
 
 ## Description
 
