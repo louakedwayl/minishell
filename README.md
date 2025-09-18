@@ -4,7 +4,7 @@
 
 ### installation
 ```bash
-make
+git clone git@github.com:louakedwayl/minishell.git && cd minishell && make
 ```
 
 ### start minishell
