@@ -105,7 +105,7 @@ This system ensures:
 - Easier memory management.  
 - A safer and cleaner execution flow, even when the shell exits unexpectedly.
 
-Example of allocation workflow:
+### Example of allocation workflow:
 ```c
 void *ft_malloc(size_t size)
 {
