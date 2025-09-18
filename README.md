@@ -1,6 +1,8 @@
 # minishell
 
-![Minishell](images/minishell.png)
+<p align="center">
+  <img src="images/minishell.png" alt="Minishell">
+</p>
 
 ## General usage
 
