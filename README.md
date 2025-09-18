@@ -6,7 +6,7 @@
 
 ## General usage
 
-### installation
+### Installation
 Clone the repository
 ```bash
 git clone git@github.com:louakedwayl/minishell.git 
@@ -17,19 +17,26 @@ Compile
 cd minishell && make
 ```
 
-### start minishell
+### Start minishell
 ```bash
 ./minishell
 ```
 A prompt will appear. You may enter your commands to be executed.
 
+---
+
 ## Description
 
-Write a shell.
+The **Minishell** project consists in recreating a simplified version of a UNIX shell.  
+It is an introduction to **process management**, **signal handling**, **command parsing**, and **environment variable manipulation** in C.  
+
+Our shell reproduces the behavior of `bash` for the most common features: executing commands, handling pipes and redirections, managing environment variables, and supporting built-in commands.
+
+---
 
 ## Shell Requirements Summary
 
-## Main Features
+### Main Features
 - **Prompt and History**  
   - Displays a prompt when waiting for a command.  
   - Keeps a working command history.
@@ -70,3 +77,31 @@ Write a shell.
   - `unset` to remove environment variables.  
   - `env` to display all environment variables.  
   - `exit` to quit the shell.
+
+---
+
+## Memory Management: Custom Garbage Collector
+
+Unlike the standard `malloc`/`free` workflow, **Minishell** uses a custom garbage collector to handle memory.  
+
+- Every allocation goes through `ft_malloc`, a wrapper around `malloc`.  
+- Each allocated pointer is automatically registered in a linked list of allocations.  
+- At the end of execution (or when cleaning the shell), all allocations can be released in one single call.  
+
+This system ensures:  
+- No memory leaks.  
+- Easier memory management.  
+- A safer and cleaner execution flow, even when the shell exits unexpectedly.
+
+Example of allocation workflow:
+```c
+void *ft_malloc(size_t size)
+{
+    void *ptr = malloc(size);
+    if (!ptr)
+        return (NULL);
+    if (create_node_garbage(ptr) == -1)
+        return (NULL);
+    return (ptr);
+}
+```
