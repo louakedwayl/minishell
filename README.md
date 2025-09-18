@@ -1,5 +1,7 @@
 # minishell
 
+![Minishell](images/minishell.png)
+
 ## General usage
 
 ### installation
