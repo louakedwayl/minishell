@@ -86,7 +86,8 @@ Here is an overview of the workflow in **Minishell**:
 
 - **User input:** The user types a command.  
 - **Lexical analysis:** The `tokenizer()` function (implemented in `tokenizer2.c`) processes the input and generates a **list of tokens**.  
-- **Syntax analysis:** The create_cmd() function (implemented in parser.c) parses the list of tokens and constructs a command structure, including redirections and heredocs. If a << heredoc is encountered, create_heredoc() reads the content from the user until the delimiter and stores it in the command structure.
+- **Syntax analysis:** The create_cmd() function (implemented in parser.c) parses the list of tokens and constructs a command structure, including redirections and heredocs.
+  - If a << heredoc is encountered, create_heredoc() reads the content from the user until the delimiter and stores it in the command structure.
 - **Command execution:** The `ft_exec()` (implemented in `exec.c`) function executes the command structure, handling **redirections, pipes**, and other shell features.
   
 ---
