@@ -20,7 +20,7 @@ int	error_parsing(char *msg)
 
 	data = get_data();
 	ft_putstr_fd("minishell: ", STDERR_FILENO);
-	ft_putstr_fd("syntax error near unexpected token `", STDERR_FILENO);
+	ft_putstr_fd("syntax error near unexpected token ", STDERR_FILENO);
 	ft_putstr_fd(msg, STDERR_FILENO);
 	ft_putstr_fd("'\n", STDERR_FILENO);
 	data->status = 2;
