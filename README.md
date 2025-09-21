@@ -7,6 +7,13 @@
 ## General usage
 
 ### Installation
+
+Installer readline (Linux / Debian/Ubuntu)
+```bash
+sudo apt update
+sudo apt install libreadline-dev
+```
+
 Clone the repository
 ```bash
 git clone git@github.com:louakedwayl/minishell.git 
