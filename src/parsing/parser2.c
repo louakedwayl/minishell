@@ -29,9 +29,6 @@ int	error_parsing(char *msg)
 
 int	ambiguous_redirect(char *msg)
 {
-	t_data	*data;
-
-	data = get_data();
 	ft_putstr_fd("minishell: ", STDERR_FILENO);
 	ft_putstr_fd(msg, STDERR_FILENO);
 	ft_putstr_fd(": ambiguous redirect\n", STDERR_FILENO);
